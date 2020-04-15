@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less"/>
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="buy-card-container">
+
+    <div class="buy-card-container-top">
+        <div class="buy-card-top-label-block">
+            <span class="buy-card-top-label">Замовлення</span>
+
+            <span class="buy-card-top-number">3</span>
+
+            <button type="button" class="btn btn-link">Очистити кошик</button>
+        </div>
+
+    </div>
+
+    <div class="buy-card-container-main">
+
+        <div class="list-line" id="1">
+
+            <img class="small-pizza" src="assets/images/pizza_2.jpg">
+            <div class="pizza-buy-name">BBQ (Maла)</div>
+            <div class="weight">
+                <img src="assets/images/size-icon.svg">
+                30
+            </div>
+            <div class="radius">
+                <img src="assets/images/weight.svg">
+                460
+            </div>
+
+
+
+
+            <div class="counter">
+                <span class="price">556грн</span>
+                <button type="button" class="minus" > -</button>
+                <span class="pizza-count"> 4 </span>
+                <button type="button" class="plus" > +</button>
+                <button type="button" class="cross"> x</button>
+            </div>
+
+        </div>
+
+        <div class="list-line" id="2">
+
+            <img class="small-pizza" src="assets/images/pizza_4.jpg">
+            <div class="pizza-buy-name">Россо Густо (Мала)</div>
+            <div class="weight">
+                <img src="assets/images/size-icon.svg">
+                30
+            </div>
+            <div class="radius">
+                <img src="assets/images/weight.svg">
+                400
+            </div>
+
+
+            <div class="counter">
+                <span class="price">189грн</span>
+                <button type="button" class="minus" > -</button>
+                <span class="pizza-count"> 1 </span>
+                <button type="button" class="plus" > +</button>
+                <button type="button" class="cross"> x</button>
+            </div>
+
+        </div>
+
+        <div class="list-line" id="3">
+
+            <img class="small-pizza" src="assets/images/pizza_6.jpg">
+            <div class="pizza-buy-name">Міксовий поло (Велика)</div>
+            <div class="weight">
+                <img src="assets/images/size-icon.svg">
+                40
+            </div>
+            <div class="radius">
+                <img src="assets/images/weight.svg">
+                780
+            </div>
+
+
+            <div class="counter">
+                <span class="price">179грн</span>
+                <button type="button" class="minus" > -</button>
+                <span class="pizza-count"> 1 </span>
+                <button type="button" class="plus" > +</button>
+                <button type="button" class="cross"> x</button>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="buy-card-container-bottom">
+        <span class="sum">Сума замовлення: </span>
+        <span class="total-price">924грн</span>
+        <button class="btn btn-primary btn-xs buy-button">
+            Купити
+        </button>
+
+    </div>
+
+</div>
+
+<div class="left-grand-container">
+
+    <div class="black-back-container" id="cart">
+
+        <div class="black-back-sub-container">
+
+            <div class="black-row-top">
+
+                <div class="coverage">(044) 222 5 222</div>
+
+                <div class="coverage">24 години / 7 днів на тиждень</div>
+
+                <div class="coverage">Безкоштовна доставка піци</div>
+
+                <div class="ss">
+                    <button class="btn btn-primary">Увійти</button>
+                </div>
+
+            </div>
+
+            <div class="black-row-bottom">
+
+                <div class="coverage"><b>Піца</b></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="pizza-kma-grand-container">
+
+        <div class="pizza-kma-container">
+            <div class="pizza">PIZZA</div>
+            <div class="kma">KMA</div>
+        </div>
+
+        <img src="assets/images/discount.svg" class="pizza-kma-triangle"  />
+
+    </div>
+
+
+    <div class="all-pizzas"><b>Усі піци</b>
+        <!--    <div class="circle-8"><b>8</b></div>-->
+    </div>
+
+
+    <div class="nav-margin">
+
+        <ul class="nav nav-pills" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                   aria-selected="true">Усі</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                   aria-selected="false">М'ясні</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages"
+                   aria-selected="false">З ананасами</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+                   aria-selected="false">З грибами</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+                   aria-selected="false">З морепродуктами</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+                   aria-selected="false">Вага</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <div class="row" id="pizza_list">
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_1.jpg" >
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 2</a>
+                            <a href="#" class="btn btn-default">Button 1</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_2.jpg">
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 3</a>
+                            <a href="#" class="btn btn-default">Button 4</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_3.jpg">
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 5</a>
+                            <a href="#" class="btn btn-default">Button 6</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_4.jpg">
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 5</a>
+                            <a href="#" class="btn btn-default">Button 6</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_5.jpg">
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 5</a>
+                            <a href="#" class="btn btn-default">Button 6</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_6.jpg">
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 5</a>
+                            <a href="#" class="btn btn-default float-right">Button 6</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_7.jpg">
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 5</a>
+                            <a href="#" class="btn btn-default float-right">Button 6</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_8.jpg">
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 5</a>
+                            <a href="#" class="btn btn-default float-right">Button 6</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+                <div class="thumbnail pizza-card">
+
+                    <img src="assets/images/pizza_9.jpg">
+
+                    <div class="caption"><h3>Thumbnail label</h3>
+
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida
+                            at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                        <p>
+                            <a href="#" class="btn btn-primary">Button 5</a>
+                            <a href="#" class="btn btn-default float-right">Button 6</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="discount-badge-grand-container">
+
+        <div class="discount-badge-container">
+
+            <span class="massage">
+                Цього тижня на все
+            </span>
+
+            <span class="percents">
+                -20%
+            </span>
+
+
+        </div>
+
+        <img src="assets/images/discount.svg" class="discount-triangle"  />
+
+    </div>
+
+</div>
+
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+html {
+  min-width: 1000px;
+}
+
+.pizza-card {
+  img {
+    min-width: 250px;
+    max-width: 250px;
+  }
+
+  h3 {
+    color: @mainColor;
+    background-color: lighten(@mainColor, 45%);
+  }
+}
+
+@media (min-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 80%;
+  }
+}
+
+//@media (min-width: 360px) {
+//  .right-grand-container {
+//    width: 0;
+//    height: 0;
+//  }
+//
+//  .left-grand-container {
+//    margin-right: 0;
+//  }
+//}
+
+
+.pizza-card {
+  min-width: 250px;
+}
+
+.left-grand-container {
+  margin-right: 300px;
+  //padding-right: 300px;
+  background-color: #ffefd5;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-item > a {
+  color: #ffad36;
+}
+
+.nav-margin {
+  margin: 30px;
+}
+
+.nav-pills > li > a:hover{
+  background-color: #ffd07d;
+  color: white;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: white;
+  background-color: #ffad36;
+}
+
+//.btn, .btn:hover, .btn:active, .btn:visited, .btn:focus {
+//  background: #ffad36;
+//  border-color: #ffad36;
+//  color: white;
+//}
+
+.all-pizzas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 100px;
+  //height: 100px;
+  font-size: xx-large;
+}
+
+.circle-8 {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: #ffad36;
+}
+
+.discount-badge-grand-container {
+  position: fixed;
+  bottom: 0;
+  height: 120px;
+  margin-left: 5px;
+  width: 100px;
+
+
+  .discount-badge-container {
+    position: relative;
+    top: 20px;
+    background-color:#EA862E;
+    height: 100px;
+    border-right: #D16200 solid 1px ;
+    border-left: #D16200 solid 1px;
+
+    .massage {
+      text-align: center;
+      color: white;
+      display: flex;
+      width: 80%;
+      margin-left: 10%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      border-bottom: darkorange dotted 3px;
+    }
+
+    .percents {
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+    }
+
+  }
+
+
+  .discount-triangle {
+    position: relative;
+    left: 0;
+    bottom: 99px;
+
+    //border-bottom: 20px solid orange;
+    //border-right: 40px solid transparent;
+    box-sizing: border-box;
+  }
+
+  .float-right{
+    float: right;
+  }
+
+}
+
