@@ -1,63 +1,42 @@
-html {
-  min-width: 1000px;
-}
 
-.pizza-card {
-  img {
-    min-width: 250px;
-    max-width: 250px;
+@media (max-width: 970px) {
+  .all-pizzas {
+   padding-top: 14% !important;
   }
 
-  h3 {
-    color: @mainColor;
-    background-color: lighten(@mainColor, 45%);
+}
+
+@media (max-width: 1083px) {
+  .free-delivery{
+    display: none;
   }
 }
 
-@media (min-width: 500px) {
-  .container {
-    width: 100%;
+@media (max-width: 800px) {
+  .all-pizzas {
+    padding-top: 22% !important;
   }
 }
 
-@media (min-width: 700px) {
-  .container {
-    width: 90%;
+@media (max-width: 900px) {
+  .work-time{
+    display: none;
   }
+
 }
-
-@media (min-width: 1000px) {
-  .container {
-    width: 90%;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    width: 80%;
-  }
-}
-
-//@media (min-width: 360px) {
-//  .right-grand-container {
-//    width: 0;
-//    height: 0;
-//  }
-//
-//  .left-grand-container {
-//    margin-right: 0;
-//  }
-//}
-
-
-.pizza-card {
-  min-width: 250px;
+.active {
+background-color: #e48631 !important;
 }
 
 .left-grand-container {
-  margin-right: 300px;
-  //padding-right: 300px;
-  background-color: #ffefd5;
+  
+  background-color: rgba(255, 239, 213, 0.78);
+}
+
+.right-corner{
+  position: absolute;
+  right:-10px;
+  top:-10px;
 }
 
 .nav {
@@ -71,7 +50,7 @@ html {
 }
 
 .nav-margin {
-  margin: 30px;
+  margin: 10px 30px 15px;
 }
 
 .nav-pills > li > a:hover{
@@ -86,83 +65,153 @@ html {
   background-color: #ffad36;
 }
 
-//.btn, .btn:hover, .btn:active, .btn:visited, .btn:focus {
-//  background: #ffad36;
-//  border-color: #ffad36;
-//  color: white;
-//}
-
 .all-pizzas {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 100px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 10%;
   //height: 100px;
   font-size: xx-large;
+
+  span{
+    display: inline-block;
+  }
 }
 
-.circle-8 {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  background-color: #ffad36;
+.orange-circle{
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  width: 25px;
+  color: white;
+  font-size: medium;
+  background: orange;
+  text-align: center;
+  border-radius: 12.5px;
 }
 
-.discount-badge-grand-container {
-  position: fixed;
-  bottom: 0;
-  height: 120px;
-  margin-left: 5px;
-  width: 100px;
+.pizza-container{
+  padding-right: 14px;
+  padding-left: 14px;
+}
 
+.pizza-card {
+  img {
+    width: 248px;
+  }
 
-  .discount-badge-container {
-    position: relative;
-    top: 20px;
-    background-color:#EA862E;
-    height: 100px;
-    border-right: #D16200 solid 1px ;
-    border-left: #D16200 solid 1px;
+  .pizza-name{
+    color: @mainColor;
+    margin: 0;
+  }
 
-    .massage {
+  .pizza-type{
+    color: #bbbbbb;
+    margin: 0;
+    font-size: small;
+
+  }
+
+  .pizza-description{
+    margin: 0;
+    font-size: small;
+  }
+
+  .small-pizza{
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 2%;
+  }
+
+  .big-pizza{
+    display:inline-block;
+    margin-left: 85px;
+    margin-top: 2%;
+  }
+
+  .weight-pizza{
+    height: 13px;
+    width: 13px;
+  }
+
+  .radius-pizza{
+    height: 13px;
+    width: 13px;
+  }
+
+  .weight-container{
+    display: block;
+    font-size: small;
+  }
+
+  .radius-container{
+    display: block;
+    font-size: small;
+  }
+
+  .small-price{
+    div{
+      font-weight: bold;
+      font-size: x-large;
       text-align: center;
-      color: white;
-      display: flex;
-      width: 80%;
-      margin-left: 10%;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 16px;
-      border-bottom: darkorange dotted 3px;
     }
 
-    .percents {
+    span{
+      font-weight: bold;
       text-align: center;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
+      margin-left: 7px;
     }
 
+    display: inline-block;
+    margin-left: 25px ;
+    margin-top: 4%;
   }
 
+  .big-price{
+    div{
+      font-weight: bold;
+      font-size: x-large;
+      text-align: center;
+    }
 
-  .discount-triangle {
-    position: relative;
-    left: 0;
-    bottom: 99px;
+    span{
+      font-weight: bold;
+      text-align: center;
+      margin-left: 7px;
+    }
 
-    //border-bottom: 20px solid orange;
-    //border-right: 40px solid transparent;
-    box-sizing: border-box;
+    display: inline-block;
+    margin-left: 82px;
+    margin-top: 4%;
   }
 
-  .float-right{
-    float: right;
+  .add-to-buy-list-small{
+    color: white;
+    background-color: rgba(223, 118, 9, 0.78);
+    border: #D16200 solid 1px;
+    margin-left: 5%;
+    margin-top: 1%;
   }
 
+  .add-to-buy-list-big{
+    color: white;
+    background-color: rgba(223, 118, 9, 0.78);
+    border: #D16200 solid 1px;
+    margin-left: 19%;
+    margin-top: 1%;
+  }
+
+  background-color: white;
+  width: 250px;
+  border: solid lightgray 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  position: relative;
 }
+
+
+
+
+
+
 
