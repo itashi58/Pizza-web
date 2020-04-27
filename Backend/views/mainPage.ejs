@@ -1,0 +1,101 @@
+
+
+<!--Right container-->
+<div class="container buy-card-container">
+
+    <div class="container-fluid buy-card-container-top">
+        <div class="buy-card-top-label-block">
+            <span class="buy-card-top-label">Замовлення</span>
+
+            <span class="buy-card-top-number" id="CardTotal">0</span>
+
+            <button type="button" class="btn btn-link" id="removeOrder">Очистити кошик</button>
+        </div>
+
+    </div>
+
+    <div class="container-fluid buy-card-container-main" id="cart">
+
+
+        <!-- Cart -->
+
+
+    </div>
+    <div class="buy-card-container-bottom">
+        <span class="sum">Сума замовлення: </span>
+        <span class="total-price" id="total-price">0 грн</span>
+        <a href="/order.html">
+            <button class="btn-m btn-primary btn-sm buy-button" id="buy-button">
+                Купити
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+<% include common/header.ejs %>
+
+
+<style>
+    .pizza-kma-triangle{
+        top: 0 !important;
+    }
+
+    .discount-triangle{
+        bottom: 88px !important;
+    }
+</style>
+
+<div class="container-fluid all-pizzas">
+    <span>Усі піци </span>
+    <div class="orange-circle" id="pizzaInMenuNum">8</div>
+</div>
+
+
+<!--Фільтри піц-->
+<div class="nav-margin">
+
+    <ul class="nav nav-pills" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+               aria-selected="true" id="filter-none">Усі</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="profile"
+               aria-selected="false" id="filter-meet">М'ясні</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="messages"
+               aria-selected="false" id="filter-pineapple">З ананасами</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+               aria-selected="false" id="filter-mushrooms">З грибами</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+               aria-selected="false" id="filter-seafood">З морепродуктами</a>
+        </li>
+    </ul>
+</div>
+
+
+<!--Ліст Піц-->
+<div class="container">
+
+    <div class="row" id="pizza_list">
+
+
+        <!--Pizza list-->
+
+
+    </div>
+
+</div>
+
+</div>
+
+<% include common/footer.ejs %>
+
+

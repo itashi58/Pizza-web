@@ -11,7 +11,7 @@ var PizzaSize = {
 };
 
 //Змінна в якій зберігаються перелік піц в кошику
-var Cart = [];
+var Cart = 0;
 
 //HTML едемент куди будуть додаватися піци
 var $cart = $("#cart");
@@ -25,7 +25,7 @@ function addToCart(pizza, size) {
     //Додавання однієї піци в кошик покупок
 
     let haveInCart = false;
-
+    console.log(Cart);
     for (let i = 0; i < Cart.length; i++) {
         if (Cart[i].pizza === pizza && Cart[i].size === size) {
             Cart[i].quantity++;

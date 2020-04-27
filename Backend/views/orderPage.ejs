@@ -1,0 +1,64 @@
+<% include common/header.ejs %>
+
+<!--Right container-->
+
+<div class="container buy-card-container">
+
+    <div class="container-fluid buy-card-container-top">
+        <div class="buy-card-top-label-block">
+            <span class="buy-card-top-label">Замовлення</span>
+
+            <span class="buy-card-top-number" id="CardTotal">0</span>
+
+            <button type="button" class="btn btn-link" id="removeOrder">Очистити кошик</button>
+        </div>
+
+    </div>
+
+    <div class="container-fluid buy-card-container-main" id="cart">
+
+
+        <!-- Cart -->
+
+
+    </div>
+    <div class="buy-card-container-bottom">
+        <span class="sum">Сума замовлення: </span>
+        <span class="total-price" id="total-price">0 грн</span>
+        <a href="/">
+        <button class="btn-m btn-primary btn-sm buy-button" style="background-color: white; color: #aeaeae">
+            Редагувати завмовлення
+        </button>
+        </a>
+
+    </div>
+
+</div>
+
+
+<div style="height: 170px"></div>
+<div class="container">
+    <div class="raw">
+<form class="col-7">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Ваше ім'я</label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Данило">
+        <small id="nameAlert" class="form-text text-muted" style="color: red !important "></small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Номер телефону</label>
+        <input type="tel" class="form-control" id="phoneNumber" placeholder="+38**********">
+        <small id="phoneNumberAlert" class="form-text text-muted" style="color: red !important "></small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Адреса</label>
+        <input type="text" class="form-control" id="address" aria-describedby="emailHelp" placeholder="вул.Хрещатик 9">
+        <small id="addressAlert" class="form-text text-muted" style="color: red !important "></small>
+    </div>
+    <button disabled class="btn btn-primary" id="submit">Submit</button>
+</form>
+    </div>
+</div>
+
+
+<% include common/footer.ejs %>

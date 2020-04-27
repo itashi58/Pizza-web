@@ -38,22 +38,22 @@ function getIngredientsArray(pizza) {
             <% if (pizza.small_size && pizza.big_size){ %>
                 <div class="small-pizza">
                     <div class="weight-container">
-                        <img class="weight-pizza" src="../www/assets/images/weight.svg">
+                        <img class="weight-pizza" src="assets/images/weight.svg">
                         <%= pizza.small_size.weight %>
                     </div>
                     <div class="radius-container">
-                        <img class="radius-pizza" src="../www/assets/images/size-icon.svg">
+                        <img class="radius-pizza" src="assets/images/size-icon.svg">
                         <%= pizza.small_size.size %>
                     </div>
                 </div>
 
                 <div class="big-pizza">
                     <div class="weight-container">
-                        <img class="weight-pizza" src="../www/assets/images/size-icon.svg">
+                        <img class="weight-pizza" src="assets/images/weight.svg">
                         <%= pizza.big_size.weight %>
                     </div>
                     <div class="radius-container ">
-                        <img class="radius-pizza" src="../www/assets/images/size-icon.svg">
+                        <img class="radius-pizza" src="assets/images/size-icon.svg">
                         <%= pizza.big_size.size %>
                     </div>
                 </div>
@@ -77,11 +77,11 @@ function getIngredientsArray(pizza) {
             <% if (pizza.small_size && !pizza.big_size){ %>
                 <div class="container small-pizza" style="margin-left: 80px">
                     <div class="raw weight-container">
-                        <img class="weight-pizza" src="../www/assets/images/weight.svg">
+                        <img class="weight-pizza" src="assets/images/weight.svg">
                         <%= pizza.small_size.weight %>
                     </div>
                     <div class="raw radius-container">
-                        <img class="radius-pizza" src="../www/assets/images/size-icon.svg">
+                        <img class="radius-pizza" src="assets/images/size-icon.svg">
                         <%= pizza.small_size.size %>
                     </div>
                 </div>
@@ -100,11 +100,11 @@ function getIngredientsArray(pizza) {
             <% if (pizza.big_size && !pizza.small_size){ %>
             <div class="big-pizza">
                 <div class="weight-container">
-                    <img class="weight-pizza" src="../www/assets/images/size-icon.svg">
+                    <img class="weight-pizza" src="assets/images/size-icon.svg">
                     <%= pizza.big_size.weight %>
                 </div>
                     <div class="radius-container ">
-                        <img class="radius-pizza" src="../www/assets/images/size-icon.svg">
+                        <img class="radius-pizza" src="assets/images/size-icon.svg">
                         <%= pizza.big_size.size %>
                     </div>
             </div>
