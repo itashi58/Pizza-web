@@ -18,11 +18,3 @@ function createOrder(){
         }
     });
 }
-
-
-
-// // $("#q").click(function () {
-// //     createOrder();
-// // });
-//
-// exports.createOrder = createOrder;

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= pageTitle %> - Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
+
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+
+
+
+</head>
+<body>
+
+<!--Right container-->
+<div class="container buy-card-container">
+
+    <div class="container-fluid buy-card-container-top">
+        <div class="buy-card-top-label-block">
+            <span class="buy-card-top-label">Замовлення</span>
+
+            <span class="buy-card-top-number" id="CardTotal">0</span>
+
+            <button type="button" class="btn btn-link" id="removeOrder">Очистити кошик</button>
+        </div>
+
+    </div>
+
+    <div class="container-fluid buy-card-container-main" id="cart">
+
+
+        <!-- Cart -->
+
+
+    </div>
+    <div class="buy-card-container-bottom">
+        <span class="sum">Сума замовлення: </span>
+        <span class="total-price" id="total-price">0 грн</span>
+        <button class="btn-m btn-primary btn-sm buy-button" id="buy-button">
+            Купити
+        </button>
+
+    </div>
+
+</div>
+
+<!--Main container-->
+<div class="left-grand-container" style="width: calc(100% - 300px)">
+
+
+<div class="container">
+    <div class="raw">
+    <form class="col-7">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+</div>
+
+
+    <!--Header-->
+    <div class="black-back-container">
+
+        <div class="black-back-sub-container">
+
+            <div class="black-row-top">
+
+                <div class="coverage phone-number">(044) 222 5 222</div>
+
+                <div class="coverage work-time">24 години / 7 днів на тиждень</div>
+
+                <div class="coverage free-delivery">Безкоштовна доставка піци</div>
+
+                <div class="ss">
+                    <button class="btn btn-primary log-in">Увійти</button>
+                </div>
+
+            </div>
+
+            <div class="black-row-bottom">
+
+                <div class="coverage"><b>Піца</b></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Pizza KMA -->
+    <div class="pizza-kma-grand-container">
+
+        <div class="pizza-kma-container">
+            <div class="pizza">PIZZA</div>
+            <div class="kma">KMA</div>
+        </div>
+
+        <img src="assets/images/discount.svg" class="pizza-kma-triangle"/>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container-fluid myfooter">
+        <p>Pizza22 - практичний проект в межах курсу JavaScript в Києво-Могилянській Академії</p>
+        <p>Доставка піци не здійснюєстья</p>
+    </div>
+
+    <div class="discount-badge-grand-container">
+
+        <div class="discount-badge-container">
+
+            <span class="massage">
+                Цього тижня на все
+            </span>
+
+            <span class="percents">
+                -20%
+            </span>
+
+
+        </div>
+
+        <img datatype="svg" src="../www/assets/images/discount.svg" class="discount-triangle"/>
+
+    </div>
+
+
+</div>
+
+
+
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
+</body>
+</html>

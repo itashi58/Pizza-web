@@ -2,29 +2,40 @@
  * Created by chaika on 25.01.16.
  */
 
+let nameIsRight = false;
+let phoneIsRight = false;
+let addressIsRight = false;
+
 $(function(){
     //This code will execute when the page is ready
     const PizzaMenu = require('./pizza/PizzaMenu');
     const PizzaCart = require('./pizza/PizzaCart');
     const Pizza_List = require('./Pizza_List');
-    const Order = require('./pizza/Order');
-
-    PizzaCart.initialiseCart();
-    PizzaMenu.initialiseMenu();
-
-    let nameIsRight = false;
-    let phoneIsRight = false;
-    let addressIsRight = false;
+    const Map = require('./pizza/Map');
+    const LiqPay = require('./pizza/Liqpay');
 
 
+        PizzaMenu.initialiseMenu();
+        PizzaCart.initialiseCart();
+
+    if (window.location.pathname === "/order.html") {
+        Map.initializeMap();
+    }
+
+
+
+
+    $("#submit").click(function () {
+        // Order.createOrder();
+        setTimeout(function() {
+            LiqPay.initialise();
+        }, 3000);
+    });
 
     $('#name').focusout(function () {
 
         nameIsRight = false;
         let myValue = $('#name').val().toString();
-
-
-
 
         if (myValue.length > 0) {
             nameIsRight = true;
@@ -39,10 +50,10 @@ $(function(){
 
         if(!nameIsRight){
             $("#nameAlert").html("You have wrong character in name");
-            $("#nameAlert").css('color', "red !important");
+            $("#nameAlert").attr("style","color: red !important ");
         } else {
             $("#nameAlert").html("OK");
-            $("#nameAlert").css('color', "green !important");
+            $("#nameAlert").attr("style","color: green !important ");
         }
 
         validData();
@@ -54,8 +65,6 @@ $(function(){
 
         phoneIsRight = false;
         let myValue = $('#phoneNumber').val().toString();
-
-
 
 
         if (myValue.length === 9) {
@@ -73,10 +82,10 @@ $(function(){
 
         if(!phoneIsRight){
             $("#phoneNumberAlert").html("You have wrong character in your number, it should be 9 characters (numbers) in format +380*********");
-            $("#phoneNumberAlert").css('color', "red !important");
+            $("#phoneNumberAlert").attr("style","color: red !important ");
         } else {
             $("#phoneNumberAlert").html("OK");
-            $("#phoneNumberAlert").css('color', "green !important");
+            $("#phoneNumberAlert").attr("style","color: green !important ");
         }
 
         validData();
@@ -97,22 +106,47 @@ $(function(){
 
         if(!addressIsRight){
             $("#addressAlert").html("Write your address");
-            $("#addressAlert").css('color', "red !important");
+            $("#addressAlert").attr("style","color: red !important ");
         } else {
             $("#addressAlert").html("OK");
-            $("#addressAlert").css('color', "green !important");
+            $("#addressAlert").attr("style","color: green !important ");
         }
 
         validData();
     });
-    
-    
-    function validData() {
-        if (nameIsRight && addressIsRight && phoneIsRight){
-            $("#submit").removeAttr("disabled")
-        }
-    }
 
-
+    
 
 });
+
+function validData() {
+    if (nameIsRight && addressIsRight && phoneIsRight){
+        $("#submit").removeAttr("disabled")
+    } else {
+        $("#submit").attr("disabled", "disabled");
+    }
+}
+
+function AddressCheck() {
+
+    addressIsRight = true;
+    let myValue = $('#address').val().toString();
+
+    if (myValue.length === 0) {
+        addressIsRight = false;
+    }
+
+    console.log(phoneIsRight);
+
+    if(!addressIsRight){
+        $("#addressAlert").html("Write your address");
+        $("#addressAlert").attr("style","color: red !important ");
+    } else {
+        $("#addressAlert").html("OK");
+        $("#addressAlert").attr("style","color: green !important ");
+    }
+
+    validData();
+
+}
+
